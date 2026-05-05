@@ -11,7 +11,7 @@
 
 * This program allocates memory on a single static byte array
 * The size of the global array can be set in `alloc.c` at the `BYTES` macro
-* Block alignment is set to the given system's pointer size `sizeof(void \*)`
+* Block alignment is set to the given system's pointer size `sizeof(void *)`
 * Allocations are made in linear time (O(n)) on a first-fit basis
 * De-allocation will coalesce adjacent free blocks of memory in constant time by probing `block->prev` and `block->next`
 * Extra space is assigned at the beginning of every block for a Header struct. `alloc()` will return the byte address directly after the header
